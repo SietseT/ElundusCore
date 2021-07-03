@@ -1,0 +1,228 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <html lang="en">
+  <meta charSet="utf-8" />
+  <title>Elundus Core - StreamElements text-to-speech simulator</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Elundus Core is a simple website that allows you to the test and simulate the text-to-speech (TTS) functionality of StreamElements (Polly) with different voices, like Brian and Ivy." />
+  <meta name="google-site-verification" content="qWBWvjI-GZSuBKM5gPnBteuBTtWs2iubcdR2TkuPywU" />
+  <meta name="image" content="./public/images/monkaw_l.png" />
+  <link rel="canonical" href="https://www.elunduscore.com" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="./public/favicons/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="./public/favicons/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="./public/favicons/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="./public/favicons/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="./public/favicons/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="./public/favicons/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="./public/favicons/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="./public/favicons/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./public/favicons/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./public/favicons/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./public/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="./public/favicons/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./public/favicons/favicon-16x16.png" />
+  <link rel="manifest" href="./public/favicons/manifest.json" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="./public/favicons/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Elundus Core - StreamElements text-to-speech simulator" />
+  <meta name="twitter:description"
+    content="Elundus Core is a simple website that allows you to the test and simulate the text-to-speech (TTS) functionality of StreamElements (Polly) with different voices, like Brian and Ivy." />
+  <meta name="twitter:image" content="./public/images/monkaw_l.png" />
+
+  <meta name="og:title" content="Elundus Core - StreamElements text-to-speech simulator" />
+  <meta name="og:description"
+    content="Elundus Core is a simple website that allows you to the test and simulate the text-to-speech (TTS) functionality of StreamElements (Polly) with different voices, like Brian and Ivy." />
+  <meta name="og:image" content="./public/images/monkaw_l.png" />
+  <meta name="og:url" content="https://www.elunduscore.com" />
+  <meta name="og:site_name" content="Elundus Core" />
+  <meta name="og:type" content="website" />
+
+  <!-- We place it here to avoid loader issues -->
+  <link href="./public/css/LineIcons.2.0.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+
+  <!--====== PRELOADER PART START ======-->
+
+  <div class="hidden preloader">
+    <div class="loader">
+      <div class="ytp-spinner">
+        <div class="ytp-spinner-container">
+          <div class="ytp-spinner-rotator">
+            <div class="ytp-spinner-left">
+              <div class="ytp-spinner-circle"></div>
+            </div>
+            <div class="ytp-spinner-right">
+              <div class="ytp-spinner-circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--====== PRELOADER PART ENDS ======-->
+
+  <!--====== HEADER PART START ======-->
+
+  <header class="header-area">
+    <div class="navbar-area">
+      <div class="container relative">
+        <div class="row">
+          <div class="w-full">
+            <nav class="flex items-center justify-between navbar navbar-expand-lg">
+              <a class="mr-4 navbar-brand" href="/">
+                <img src="./public/images/monkaw_l.png" class="h-16 w-16" alt="Logo">
+              </a>
+              <button class="block navbar-toggler focus:outline-none lg:hidden" type="button" data-toggle="collapse"
+                data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-icon"></span>
+                <span class="toggler-icon"></span>
+                <span class="toggler-icon"></span>
+              </button>
+
+              <div
+                class="absolute left-0 z-20 hidden w-full px-5 py-3 duration-300 bg-white shadow lg:w-auto collapse navbar-collapse lg:block top-100 mt-full lg:static lg:bg-transparent lg:shadow-none"
+                id="navbarOne">
+                <ul id="nav" class="items-center content-start mr-auto lg:justify-end navbar-nav lg:flex">
+                  <li class="nav-item active">
+                    <a class="page-scroll" href="#home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="page-scroll" href="#features">Features</a>
+                  </li>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="absolute right-0 hidden mt-2 mr-24 navbar-btn sm:inline-block lg:mt-0 lg:static lg:mr-0">
+                <a class="main-btn gradient-btn" data-scroll-nav="0" href="https://github.com/SietseT/ElundusCoreApp" target="_blank" rel="noreferrer">
+                  View on GitHub <i class="lni lni-github"></i></a>
+              </div>
+            </nav> <!-- navbar -->
+          </div>
+        </div> <!-- row -->
+      </div> <!-- container -->
+    </div> <!-- navbar area -->
+
+    <div id="home" class="header-hero" style="background-image: url(./public/images/banner-bg.svg)">
+      <div class="container">
+        <div class="justify-center row">
+          <div class="w-full lg:w-2/3">
+            <div class="pt-32 mb-12 text-center lg:pt-48 header-hero-content">
+              <h3 class="text-4xl font-light leading-tight text-white header-sub-title wow fadeInUp"
+                data-wow-duration="1.3s" data-wow-delay="0.2s">Elundus Core</h3>
+              <h2 class="mb-3 text-4xl font-bold text-white header-title wow fadeInUp" data-wow-duration="1.3s"
+                data-wow-delay="0.5s">Text-to-speech simulator</h2>
+              <p class="mb-8 text-white text wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">Use this simple tool to simulate StreamElements text-to-speech (TTS) voice messages for Twitch. Hear how a donation for your favorite streamer sounds like!</p>
+              <a href="https://github.com/SietseT/ElundusCoreApp/releases/latest" target="_blank" rel="noreferrer" class="main-btn gradient-btn gradient-btn-2 wow fadeInUp" data-wow-duration="1.3s"
+                data-wow-delay="1.1s">Download</a>
+            </div> <!-- header hero content -->
+          </div>
+        </div> <!-- row -->
+        <div class="justify-center row">
+          <div class="w-full lg:w-2/3">
+            <div class="text-center header-hero-image wow fadeIn" data-wow-duration="1.3s" data-wow-delay="1.4s">
+              <img src="./public/images/header-hero-app.png" alt="hero">
+            </div> <!-- header hero image -->
+          </div>
+        </div> <!-- row -->
+      </div> <!-- container -->
+      <div id="particles-1" class="particles"></div>
+    </div> <!-- header hero -->
+  </header>
+
+  <!--====== HEADER PART ENDS ======-->
+
+  <!--====== SERVICES PART START ======-->
+
+  <section id="features" class="services-area pt-120">
+    <div class="container">
+      <div class="justify-center row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+        <div class="w-full lg:w-2/3">
+          <div class="pb-10 text-center section-title">
+            <div class="m-auto line"></div>
+            <h3 class="title">Features</span></h3>
+          </div> <!-- section title -->
+        </div>
+      </div> <!-- row -->
+      <div class="justify-center row">
+        <div class="w-full sm:w-2/3 lg:w-1/3">
+          <div class="single-services wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+            <div class="services-icon">
+              <img class="shape" src="./public/images/services-shape.svg" alt="shape">
+              <img class="shape-1" src="./public/images/services-shape-1.svg" alt="shape">
+              <i class="lni lni-github"></i>
+            </div>
+            <div class="mt-8 services-content">
+              <h4 class="mb-8 text-xl font-bold text-gray-900">Open-source</h4>
+              <p class="mb-8">
+                The app is open-source and contributions from the community are more than welcome.
+                <div class="sm:hidden lg:block">
+                  <br />
+                </div>
+              </p>
+            </div>
+          </div> <!-- single services -->
+        </div>
+        <div class="w-full sm:w-2/3 lg:w-1/3">
+          <div class="mt-8 text-center single-services wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="services-icon">
+              <img class="shape" src="./public/images/services-shape.svg" alt="shape">
+              <img class="shape-1" src="./public/images/services-shape-2.svg" alt="shape">
+              <i class="lni lni-volume-high"></i>
+            </div>
+            <div class="mt-8 services-content">
+              <h4 class="mb-8 text-xl font-bold text-gray-900">Many voices</h4>
+              <p class="mb-8">Includes Amazon Polly voices that are used by popular streaming software, like StreamElements and StreamLabs.</p>
+            </div>
+          </div> <!-- single services -->
+        </div>
+        <div class="w-full sm:w-2/3 lg:w-1/3">
+          <div class="mt-8 text-center single-services wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+            <div class="services-icon">
+              <img class="shape" src="./public/images/services-shape.svg" alt="shape">
+              <img class="shape-1" src="./public/images/services-shape-3.svg" alt="shape">
+              <i class="lni lni-rocket"></i>
+            </div>
+            <div class="mt-8 services-content">
+              <h4 class="mb-8 text-xl font-bold text-gray-900">Safe, private and stable</h4>
+              <p class="mb-8">No more tracking and captchas. The application runs securely on your own computer and is updated automatically.</p>
+            </div>
+          </div> <!-- single services -->
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container -->
+  </section>
+
+  <!--====== SERVICES PART ENDS ======-->
+
+  <!--====== FOOTER PART START ======-->
+
+  <footer id="footer" class="relative z-10 footer-area pt-28">
+    <div class="container">
+      <div class="py-8 border-t border-gray-200 footer-copyright">
+        <p class="text-gray-700">
+          Check it out on <a class="duration-300 hover:text-theme-color-2" href="https://github.com/SietseT/ElundusCoreApp" rel="noreferrer">GitHub <i class="lni lni-github"></i></a>
+        </p>
+      </div> <!-- footer copyright -->
+    </div> <!-- container -->
+    <div id="particles-2" class="particles"></div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+</body>
+</html>
